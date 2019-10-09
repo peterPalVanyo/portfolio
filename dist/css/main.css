@@ -60,6 +60,13 @@ input[class^="btn-"]:hover {
   font-size: 1.3rem;
   margin-bottom: 2rem; }
 
+.section-title {
+  font-size: 2rem;
+  display: block;
+  text-align: center;
+  font-weight: 100;
+  text-transform: uppercase; }
+
 .text-center {
   text-align: center; }
 
@@ -86,6 +93,13 @@ input[class^="btn-"]:hover {
 
 .my-4 {
   margin: 4rem 0; }
+
+.bottom-line {
+  height: 3px;
+  width: 5rem;
+  background: #9bdf48;
+  display: block;
+  margin: 0 auto 1rem auto; }
 
 .logo {
   width: 80px;
@@ -153,3 +167,35 @@ input[class^="btn-"]:hover {
       background: rgba(77, 147, 123, 0.2); }
     #home-b .stats ul:nth-child(even) {
       background: rgba(0, 0, 0, 0.2); }
+
+#home-c .process {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1.5rem;
+  text-align: center; }
+  #home-c .process-step {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 28px;
+    background: #9bdf48;
+    border-radius: 50%;
+    height: 15px;
+    width: 15px;
+    line-height: 15px;
+    padding: 1rem;
+    transition: all 1s; }
+  #home-c .process-icon {
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    position: relative;
+    transition: all 1s; }
+    #home-c .process-icon:hover {
+      background: #9bdf48;
+      width: 90px;
+      height: 90px;
+      line-height: 90px; }
