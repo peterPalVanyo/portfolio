@@ -204,7 +204,7 @@ input[class^="btn-"]:hover {
 }
 
 //home
-#home-bg {
+.home-bg {
     background: $bg-texture no-repeat center center/cover;
 }
 
@@ -319,6 +319,43 @@ input[class^="btn-"]:hover {
                 background: $main-color;
             }
         }
+    }
+    &-c {
+        background: $light-bg;
+        color: setTextColor($light-bg);
+        .about-logos {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 2rem;
+            img {
+                width: 50%;
+            }
+        }
+    }
+    &-d {
+        .testimonials {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 0.5rem;
+            ul {
+                list-style: none;
+                margin-top: 1rem;
+                display: flex;
+                align-items: center;
+            }
+            p {
+                border: 1px solid #000;
+                border-radius: 5px;
+                padding: 0.5rem;
+            }
+            img {
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                margin-right: 0.5rem;
+            }
+        }
+
     }
 }
 
