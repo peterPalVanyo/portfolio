@@ -6,6 +6,7 @@ $light-color: rgb(240, 239, 229);
 $medium-color: rgb(223, 222, 206);
 $dark-color: rgb(31,96,74);
 $dark-bg: rgba(0,0,0,0.2);
+$dark-bg2: rgba(0,0,0,0.6);
 $light-bg: rgba(77,147,123, 0.2);
 $bg-image: url("../img/showcase.jpg");
 $bg-texture: url("../img/texture.jpg");
@@ -143,6 +144,10 @@ input[class^="btn-"]:hover {
 .logo {
   width: 80px;
   height: 80px;
+  &-main {
+      width: 70px;
+      height: 70px;
+  }
 }
 .social-logo {
     width: 30px;
@@ -152,7 +157,7 @@ input[class^="btn-"]:hover {
 #main-nav {
   display: flex;
   justify-content: space-between;
-  padding-top: 1rem;
+  padding-top: 0.5rem;
   ul {
     display: flex;
   }
@@ -191,8 +196,11 @@ input[class^="btn-"]:hover {
       }
     }
   }
-  /*   &-inner {
-  } */
+    &-inner {
+        background: $bg-image no-repeat 20% 40%/cover;
+        height: 5.5rem;
+        border-bottom: 3px solid $main-color;
+  }
 }
 
 //home
@@ -260,6 +268,41 @@ input[class^="btn-"]:hover {
           }
       }
   }
+}
+
+// about
+#about {
+    &-a {
+        .about-info {
+            display: grid;
+            grid-template-areas: 
+            'bioimage bio bio'
+            'award1 award2 award3';
+            grid-gap: 1.2rem;
+        }
+        .bioimage {
+            grid-area: bioimage;
+        }
+        .bio {
+            grid-area: bio;
+            border-left: 3px solid $main-color;
+            padding: 0.8rem;
+            background: $dark-bg2;
+            color: setTextColor($dark-bg2);
+        }
+        .award1 {
+            grid-area: award1;
+        }
+        .award2 {
+            grid-area: award2;
+        }
+        .award3 {
+            grid-area: award3;
+        }
+        .award1 object, award2 object, award3 object {
+
+        }
+    }
 }
 
 #main-footer {
