@@ -222,6 +222,21 @@ input[class^="btn-"]:hover {
 #about-a .award3 {
   grid-area: award3; }
 
+#about-b {
+  background: rgba(0, 0, 0, 0.6);
+  color: #f0efe5; }
+  #about-b .progress {
+    overflow: hidden;
+    height: 20px;
+    background: #dfdece;
+    border-radius: 5px;
+    margin-bottom: 0.3rem; }
+    #about-b .progress div {
+      height: 100%;
+      color: #fff;
+      text-align: center;
+      background: #9bdf48; }
+
 #main-footer {
   background: black;
   color: #f0efe5;
