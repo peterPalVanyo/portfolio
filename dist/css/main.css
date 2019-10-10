@@ -40,16 +40,16 @@ img {
   cursor: pointer; }
 
 .btn-main {
-  color: #333;
-  background-color: #9bdf48; }
+  background-color: #9bdf48;
+  color: #000; }
 
 .btn-light {
-  color: #333;
-  background-color: #dfdece; }
+  background-color: #dfdece;
+  color: #000; }
 
 .btn-dark {
-  color: #f4f4f4;
-  background-color: #1f604a; }
+  background-color: #1f604a;
+  color: #000; }
 
 button[class^="btn-"]:hover,
 a[class^="btn-"]:hover,
@@ -101,9 +101,16 @@ input[class^="btn-"]:hover {
   display: block;
   margin: 0 auto 1rem auto; }
 
+.txt-type > .txt {
+  border-right: 0.1rem solid #9bdf48; }
+
 .logo {
   width: 80px;
   height: 80px; }
+
+.social-logo {
+  width: 30px;
+  height: 30px; }
 
 #main-nav {
   display: flex;
@@ -173,29 +180,29 @@ input[class^="btn-"]:hover {
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 1.5rem;
   text-align: center; }
-  #home-c .process-step {
-    position: absolute;
-    top: 0;
-    right: 0;
-    font-size: 28px;
-    background: #9bdf48;
-    border-radius: 50%;
-    height: 15px;
-    width: 15px;
-    line-height: 15px;
-    padding: 1rem;
-    transition: all 1s; }
   #home-c .process-icon {
     border-radius: 50%;
     background: rgba(0, 0, 0, 0.2);
     padding: 1rem;
     width: 70px;
     height: 70px;
-    line-height: 70px;
     position: relative;
     transition: all 1s; }
     #home-c .process-icon:hover {
       background: #9bdf48;
       width: 90px;
-      height: 90px;
-      line-height: 90px; }
+      height: 90px; }
+
+#main-footer {
+  background: black;
+  color: #f0efe5;
+  height: 4rem; }
+  #main-footer .footer-content {
+    display: flex;
+    justify-content: space-between;
+    height: 4rem;
+    align-items: center; }
+    #main-footer .footer-content .social object {
+      margin-right: 1rem; }
+      #main-footer .footer-content .social object:hover {
+        background: #9bdf48; }

@@ -10,6 +10,14 @@ $light-bg: rgba(77,147,123, 0.2);
 $bg-image: url("../img/showcase.jpg");
 $bg-texture: url("../img/texture.jpg");
 
+@function setTextColor($color) {
+    @if(lightness($color) > 50) {
+        @return #000;
+    } @else {
+        @return $light-color;
+    }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -59,18 +67,18 @@ img {
 .btn {
   &-main {
     @extend %btn-shared;
-    color: #333;
     background-color: $main-color;
+    color: setTextColor($main-color);
   }
   &-light {
     @extend %btn-shared;
-    color: #333;
     background-color: $medium-color;
+    color: setTextColor($main-color);
   }
   &-dark {
     @extend %btn-shared;
-    color: #f4f4f4;
     background-color: $dark-color;
+    color: setTextColor($main-color);
   }
 }
 button[class^="btn-"]:hover,
@@ -128,10 +136,17 @@ input[class^="btn-"]:hover {
     margin: 0 auto 1rem auto;
 }
 // *************************************************************************************
-// logo
+// logo + cursor
+.txt-type > .txt {
+    border-right: 0.1rem solid $main-color;
+}
 .logo {
   width: 80px;
   height: 80px;
+}
+.social-logo {
+    width: 30px;
+    height: 30px;
 }
 // main nav
 #main-nav {
@@ -229,37 +244,40 @@ input[class^="btn-"]:hover {
           grid-gap: 1.5rem;
           text-align: center;
 
-          &-step {
-              position: absolute;
-              top: 0;
-              right: 0;
-              font-size: 28px;
-              background: $main-color;
-              border-radius: 50%;
-              height: 15px;
-              width: 15px;
-              line-height: 15px;
-              padding: 1rem;
-              transition: all 1s;
-          }
           &-icon {
               border-radius: 50%;
               background: $dark-bg;
               padding: 1rem;
               width: 70px;
               height: 70px;
-              line-height: 70px;
               position: relative;
               transition: all 1s;
               &:hover {
                 background: $main-color;
                 width: 90px;
                 height: 90px;
-                line-height: 90px; 
               }
           }
       }
   }
+}
+
+#main-footer {
+    background:black;
+    color: $light-color;
+    height:4rem;
+    .footer-content {
+        display: flex;
+        justify-content: space-between;
+        height: 4rem;
+        align-items: center;
+        .social object {
+            margin-right: 1rem;
+            &:hover {
+                background: $main-color;
+            }
+        }
+    }
 }
 
 
