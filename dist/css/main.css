@@ -212,6 +212,8 @@ input[class^="btn-"]:hover {
   padding: 0.8rem;
   background: rgba(0, 0, 0, 0.6);
   color: #f0efe5; }
+  #about-a .bio p {
+    margin-top: 1rem; }
 
 #about-a .award1 {
   grid-area: award1; }
@@ -243,7 +245,9 @@ input[class^="btn-"]:hover {
   #about-c .about-logos {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: 2rem; }
+    grid-gap: 2rem;
+    align-items: center;
+    justify-items: center; }
     #about-c .about-logos img {
       width: 50%; }
 

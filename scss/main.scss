@@ -289,6 +289,9 @@ input[class^="btn-"]:hover {
             padding: 0.8rem;
             background: $dark-bg2;
             color: setTextColor($dark-bg2);
+            p {
+                margin-top: 1rem;
+            }
         }
         .award1 {
             grid-area: award1;
@@ -327,6 +330,8 @@ input[class^="btn-"]:hover {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             grid-gap: 2rem;
+            align-items: center;
+            justify-items: center;
             img {
                 width: 50%;
             }
@@ -358,6 +363,7 @@ input[class^="btn-"]:hover {
 
     }
 }
+
 
 #main-footer {
     background:black;
