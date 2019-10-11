@@ -1,22 +1,24 @@
+
 //variables
 $website-width: 1280px;
 /* $main-color: #ffbc00; */
 $main-color: rgb(155, 223, 72);
 $light-color: rgb(240, 239, 229);
 $medium-color: rgb(223, 222, 206);
-$dark-color: rgb(31,96,74);
-$dark-bg: rgba(0,0,0,0.2);
-$dark-bg2: rgba(0,0,0,0.6);
-$light-bg: rgba(77,147,123, 0.2);
+$dark-color: rgb(31, 96, 74);
+$dark-bg: rgba(0, 0, 0, 0.2);
+$dark-bg2: rgba(0, 0, 0, 0.6);
+$light-bg: rgba(77, 147, 123, 0.2);
 $bg-image: url("../img/showcase.jpg");
 $bg-texture: url("../img/texture.jpg");
+@import "item_grid";
 
 @function setTextColor($color) {
-    @if(lightness($color) > 50) {
-        @return #000;
-    } @else {
-        @return $light-color;
-    }
+  @if (lightness($color) > 50) {
+    @return #000;
+  } @else {
+    @return $light-color;
+  }
 }
 
 * {
@@ -92,11 +94,11 @@ input[class^="btn-"]:hover {
   margin-bottom: 2rem;
 }
 .section-title {
-    font-size: 2rem;
-    display: block;
-    text-align: center;
-    font-weight: 100;
-    text-transform: uppercase;
+  font-size: 2rem;
+  display: block;
+  text-align: center;
+  font-weight: 100;
+  text-transform: uppercase;
 }
 .text-center {
   text-align: center;
@@ -130,28 +132,28 @@ input[class^="btn-"]:hover {
   }
 }
 .bottom-line {
-    height: 3px;
-    width: 5rem;
-    background: $main-color;
-    display: block;
-    margin: 0 auto 1rem auto;
+  height: 3px;
+  width: 5rem;
+  background: $main-color;
+  display: block;
+  margin: 0 auto 1rem auto;
 }
 // *************************************************************************************
 // logo + cursor
 .txt-type > .txt {
-    border-right: 0.1rem solid $main-color;
+  border-right: 0.1rem solid $main-color;
 }
 .logo {
   width: 80px;
   height: 80px;
   &-main {
-      width: 70px;
-      height: 70px;
+    width: 70px;
+    height: 70px;
   }
 }
 .social-logo {
-    width: 30px;
-    height: 30px;
+  width: 30px;
+  height: 30px;
 }
 // main nav
 #main-nav {
@@ -196,16 +198,16 @@ input[class^="btn-"]:hover {
       }
     }
   }
-    &-inner {
-        background: $bg-image no-repeat 20% 40%/cover;
-        height: 5.5rem;
-        border-bottom: 3px solid $main-color;
+  &-inner {
+    background: $bg-image no-repeat 20% 40% / cover;
+    height: 5.5rem;
+    border-bottom: 3px solid $main-color;
   }
 }
 
 //home
 .home-bg {
-    background: $bg-texture no-repeat center center/cover;
+  background: $bg-texture no-repeat center center/cover;
 }
 
 #home {
@@ -222,165 +224,171 @@ input[class^="btn-"]:hover {
   }
   &-b {
     .stats {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        li {
-            /* line-height: 2; */
-            &.stats-title {
-                font-size: 1.5rem;
-            }
-            &.stats-number {
-                font-size: 2rem;
-                font-weight: bold;
-            }
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      li {
+        /* line-height: 2; */
+        &.stats-title {
+          font-size: 1.5rem;
         }
-        ul {
-            padding: 3rem 0;
-            &:nth-child(odd) {
-                background: $light-bg;
-            }
-            &:nth-child(even) {
-                background: $dark-bg;
-            }
+        &.stats-number {
+          font-size: 2rem;
+          font-weight: bold;
         }
+      }
+      ul {
+        padding: 3rem 0;
+        &:nth-child(odd) {
+          background: $light-bg;
+        }
+        &:nth-child(even) {
+          background: $dark-bg;
+        }
+      }
     }
   }
   &-c {
-      .process {
-          display: grid;
-          grid-template-columns: repeat(4, 1fr);
-          grid-gap: 1.5rem;
-          text-align: center;
+    .process {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 1.5rem;
+      text-align: center;
 
-          &-icon {
-              border-radius: 50%;
-              background: $dark-bg;
-              padding: 1rem;
-              width: 70px;
-              height: 70px;
-              position: relative;
-              transition: all 1s;
-              &:hover {
-                background: $main-color;
-                width: 90px;
-                height: 90px;
-              }
-          }
+      &-icon {
+        border-radius: 50%;
+        background: $dark-bg;
+        padding: 1rem;
+        width: 70px;
+        height: 70px;
+        position: relative;
+        transition: all 1s;
+        &:hover {
+          background: $main-color;
+          width: 90px;
+          height: 90px;
+        }
       }
+    }
   }
 }
 
 // about
 #about {
-    &-a {
-        .about-info {
-            display: grid;
-            grid-template-areas: 
-            'bioimage bio bio'
-            'award1 award2 award3';
-            grid-gap: 1.2rem;
-        }
-        .bioimage {
-            grid-area: bioimage;
-        }
-        .bio {
-            grid-area: bio;
-            border-left: 3px solid $main-color;
-            padding: 0.8rem;
-            background: $dark-bg2;
-            color: setTextColor($dark-bg2);
-            p {
-                margin-top: 1rem;
-            }
-        }
-        .award1 {
-            grid-area: award1;
-        }
-        .award2 {
-            grid-area: award2;
-        }
-        .award3 {
-            grid-area: award3;
-        }
-        .award1 object, award2 object, award3 object {
-
-        }
+  &-a {
+    .about-info {
+      display: grid;
+      grid-template-areas:
+        "bioimage bio bio"
+        "award1 award2 award3";
+      grid-gap: 1.2rem;
     }
-    &-b {
-        background: $dark-bg2;
-        color: setTextColor($dark-bg2);
-        .progress {
-            overflow: hidden;
-            height: 20px;
-            background: $medium-color;
-            border-radius: 5px;
-            margin-bottom: 0.3rem; 
-            div {
-                height: 100%;
-                color: #fff;
-                text-align: center;
-                background: $main-color;
-            }
-        }
+    .bioimage {
+      grid-area: bioimage;
     }
-    &-c {
-        background: $light-bg;
-        color: setTextColor($light-bg);
-        .about-logos {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            grid-gap: 2rem;
-            align-items: center;
-            justify-items: center;
-            img {
-                width: 50%;
-            }
-        }
+    .bio {
+      grid-area: bio;
+      border-left: 3px solid $main-color;
+      padding: 0.8rem;
+      background: $dark-bg2;
+      color: setTextColor($dark-bg2);
+      p {
+        margin-top: 1rem;
+      }
     }
-    &-d {
-        .testimonials {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            grid-gap: 0.5rem;
-            ul {
-                list-style: none;
-                margin-top: 1rem;
-                display: flex;
-                align-items: center;
-            }
-            p {
-                border: 1px solid #000;
-                border-radius: 5px;
-                padding: 0.5rem;
-            }
-            img {
-                width: 50px;
-                height: 50px;
-                border-radius: 50%;
-                margin-right: 0.5rem;
-            }
-        }
-
+    .award1 {
+      grid-area: award1;
     }
+    .award2 {
+      grid-area: award2;
+    }
+    .award3 {
+      grid-area: award3;
+    }
+    .award1 object,
+    award2 object,
+    award3 object {
+    }
+  }
+  &-b {
+    background: $dark-bg2;
+    color: setTextColor($dark-bg2);
+    .progress {
+      overflow: hidden;
+      height: 20px;
+      background: $medium-color;
+      border-radius: 5px;
+      margin-bottom: 0.3rem;
+      div {
+        height: 100%;
+        color: #fff;
+        text-align: center;
+        background: $main-color;
+      }
+    }
+  }
+  &-c {
+    background: $light-bg;
+    color: setTextColor($light-bg);
+    .about-logos {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 2rem;
+      align-items: center;
+      justify-items: center;
+      img {
+        width: 50%;
+      }
+    }
+  }
+  &-d {
+    .testimonials {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 0.5rem;
+      ul {
+        list-style: none;
+        margin-top: 1rem;
+        display: flex;
+        align-items: center;
+      }
+      p {
+        border: 1px solid #000;
+        border-radius: 5px;
+        padding: 0.5rem;
+      }
+      img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin-right: 0.5rem;
+      }
+    }
+  }
 }
-
 
 #main-footer {
-    background:black;
-    color: $light-color;
-    height:4rem;
-    .footer-content {
-        display: flex;
-        justify-content: space-between;
-        height: 4rem;
-        align-items: center;
-        .social object {
-            margin-right: 1rem;
-            &:hover {
-                background: $main-color;
-            }
-        }
+  background: black;
+  color: $light-color;
+  height: 4rem;
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    height: 4rem;
+    align-items: center;
+    .social object {
+      margin-right: 1rem;
+      &:hover {
+        background: $main-color;
+      }
     }
+  }
 }
 
+//infograph
 
+.ig {
+    display: block;
+    width: 42vw;
+    text-align: center;
+    margin: 2rem auto;
+}
