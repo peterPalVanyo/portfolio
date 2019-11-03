@@ -1,4 +1,3 @@
-
 //variables
 $website-width: 1280px;
 /* $main-color: #ffbc00; */
@@ -76,7 +75,11 @@ img {
   &-light {
     @extend %btn-shared;
     background-color: $medium-color;
+    border-radius: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
     color: setTextColor($main-color);
+    
   }
   &-dark {
     @extend %btn-shared;
@@ -137,6 +140,12 @@ input[class^="btn-"]:hover {
   background: $main-color;
   display: block;
   margin: 0 auto 1rem auto;
+}
+.light-bg {
+  background-color: rgba(0,0,0, 0.5);
+  border-radius: 1rem;
+  padding: 0 1rem;
+  display: inline-block;
 }
 // *************************************************************************************
 // logo + cursor
@@ -387,59 +396,59 @@ input[class^="btn-"]:hover {
 //infograph
 
 .ig {
-    display: block;
-    width: 42vw;
-    text-align: center;
-    margin: 2rem auto;
+  display: block;
+  width: 42vw;
+  text-align: center;
+  margin: 2rem auto;
 }
 
 //contact page
 #contact {
-    &-a {
-        .text-fields {
-            display: grid;
-            grid-template-areas: 
-            'name email'
-            'subject phone'
-            'message message';
-            grid-gap: 1.2rem;
-            margin-bottom: 1.2rem;
-            .name-input {
-                grid-area: name;
-            }
-            .subject-input {
-                grid-area: subject;
-            }
-            .email-input {
-                grid-area: email;
-            }
-            .phone-input {
-                grid-area: phone;
-            }
-            .message-input {
-                grid-area: message;
-                height: 100px;
-            }
-            //all
-            .text-input {
-                padding: 0.5rem 1rem;
-            }
-        }
-        button[type='submit'] {
-            width: 50%;
-        }
+  &-a {
+    .text-fields {
+      display: grid;
+      grid-template-areas:
+        "name email"
+        "subject phone"
+        "message message";
+      grid-gap: 1.2rem;
+      margin-bottom: 1.2rem;
+      .name-input {
+        grid-area: name;
+      }
+      .subject-input {
+        grid-area: subject;
+      }
+      .email-input {
+        grid-area: email;
+      }
+      .phone-input {
+        grid-area: phone;
+      }
+      .message-input {
+        grid-area: message;
+        height: 100px;
+      }
+      //all
+      .text-input {
+        padding: 0.5rem 1rem;
+      }
     }
-    &-b {
-        background: $dark-bg2;
-        .contact-info {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            text-align: center;
-        }
+    button[type="submit"] {
+      width: 50%;
     }
-    &-c {
-        background: $main-color;
-        text-align: center;
-        font-size: 4rem;
+  }
+  &-b {
+    background: $dark-bg2;
+    .contact-info {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      text-align: center;
     }
+  }
+  &-c {
+    background: $main-color;
+    text-align: center;
+    font-size: 4rem;
+  }
 }

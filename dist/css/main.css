@@ -119,6 +119,9 @@ img {
 
 .btn-light {
   background-color: #dfdece;
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: bold;
   color: #000; }
 
 .btn-dark {
@@ -174,6 +177,12 @@ input[class^="btn-"]:hover {
   background: #9bdf48;
   display: block;
   margin: 0 auto 1rem auto; }
+
+.light-bg {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 1rem;
+  padding: 0 1rem;
+  display: inline-block; }
 
 .txt-type > .txt {
   border-right: 0.1rem solid #9bdf48; }
@@ -366,7 +375,7 @@ input[class^="btn-"]:hover {
 
 #contact-a .text-fields {
   display: grid;
-  grid-template-areas: 'name email' 'subject phone' 'message message';
+  grid-template-areas: "name email" "subject phone" "message message";
   grid-gap: 1.2rem;
   margin-bottom: 1.2rem; }
   #contact-a .text-fields .name-input {
@@ -383,7 +392,7 @@ input[class^="btn-"]:hover {
   #contact-a .text-fields .text-input {
     padding: 0.5rem 1rem; }
 
-#contact-a button[type='submit'] {
+#contact-a button[type="submit"] {
   width: 50%; }
 
 #contact-b {
