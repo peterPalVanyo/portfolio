@@ -82,8 +82,13 @@
     }
     &-text-category {
         text-transform: uppercase;
+        color: black;
         font-size: 1.2rem;
         opacity: 0.7;
         margin: 0;
+    }
+    & a {
+        color: black;
+        text-decoration: underline;
     }
 }
