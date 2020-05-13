@@ -192,8 +192,8 @@ input[class^="btn-"]:hover {
   border-right: 0.1rem solid #9bdf48; }
 
 .logo {
-  width: 80px;
-  height: 80px; }
+  width: 75px;
+  height: 75px; }
   .logo-main {
     width: 70px;
     height: 70px; }
@@ -287,7 +287,8 @@ input[class^="btn-"]:hover {
 
 #about-a .about-info {
   display: grid;
-  grid-template-areas: "bioimage bio bio" "award1 award2 award3";
+  grid-template-areas: "bioimage bio bio"
+ "award1 award2 award3";
   grid-gap: 1.2rem; }
 
 #about-a .bioimage {
@@ -394,7 +395,9 @@ input[class^="btn-"]:hover {
 
 #contact-a .text-fields {
   display: grid;
-  grid-template-areas: "name email" "subject phone" "message message";
+  grid-template-areas: "name email"
+ "subject phone"
+ "message message";
   grid-gap: 1.2rem;
   margin-bottom: 1.2rem; }
   #contact-a .text-fields .name-input {
@@ -460,13 +463,21 @@ input[class^="btn-"]:hover {
   #home-b .stats ul {
     padding: 2rem 0 1rem 0; }
   #about-a .about-info {
-    grid-template-areas: "bioimage" "bio" "award1" "award2" "award3"; }
+    grid-template-areas: "bioimage"
+ "bio"
+ "award1"
+ "award2"
+ "award3"; }
   #about-c {
     display: none; }
   #contact .home-bg {
     background: white; }
   #contact-a .text-fields {
-    grid-template-areas: 'name' 'email' 'subject' 'phone' 'message'; }
+    grid-template-areas: 'name'
+ 'email'
+ 'subject'
+ 'phone'
+ 'message'; }
   #contact-b .contact-info {
     grid-template-columns: 1fr;
     color: white; }

@@ -152,8 +152,8 @@ input[class^="btn-"]:hover {
   border-right: 0.1rem solid $main-color;
 }
 .logo {
-  width: 80px;
-  height: 80px;
+  width: 75px;
+  height: 75px;
   &-main {
     width: 70px;
     height: 70px;
@@ -464,7 +464,7 @@ input[class^="btn-"]:hover {
     background: $main-color;
     text-align: center;
     h2 {
-     font-size: 2.5rem;
+      font-size: 2.5rem;
     }
   }
 }
@@ -541,12 +541,12 @@ input[class^="btn-"]:hover {
     }
     &-a {
       .text-fields {
-        grid-template-areas: 
-          'name'
-          'email'
-          'subject'
-          'phone'
-          'message';
+        grid-template-areas:
+          "name"
+          "email"
+          "subject"
+          "phone"
+          "message";
       }
     }
     &-b {
@@ -574,7 +574,7 @@ input[class^="btn-"]:hover {
   }
 }
 
-@media(max-height: 580px) {
+@media (max-height: 580px) {
   #header-home {
     .header-content {
       padding-top: 3rem;
